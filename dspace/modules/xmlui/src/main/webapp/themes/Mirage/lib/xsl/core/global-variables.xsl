@@ -39,4 +39,8 @@
     <xsl:variable name="ds_item_view_toggle_url" select="//dri:p[contains(@rend , 'item-view-toggle') and
         (preceding-sibling::dri:referenceSet[@type = 'summaryView'] or following-sibling::dri:referenceSet[@type = 'summaryView'])]/dri:xref/@target"/>
 
+    <!-- customization -->
+    <!-- Main collection with regular programm. Entry point instead of communities&collections -->
+    <xsl:variable name="home-collection">handle/56789/363</xsl:variable>
+    <xsl:variable name="special-collection">handle/56789/353</xsl:variable>
 </xsl:stylesheet>

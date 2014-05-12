@@ -2597,4 +2597,22 @@
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publication type</message>
 	<message key="xmlui.Discovery.AdvancedSearch.type_type">Publication type</message>
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.division">Division</message>
+
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.author">Creator</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_dateIssued">Date</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.author">Creator</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.title">Title</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.subject">Subject</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.dateIssued">Date</message>
+
+
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_series">Series</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Browsing {0} by series {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Browsing {0}  by series {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading"></message>
+
+        <message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities"></message>
+        <message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections"></message>
+        <message key="xmlui.ArtifactBrowser.Navigation.home.collection">Subjects</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.special.collection">Publications not in our regular program</message>
 </catalogue>

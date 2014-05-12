@@ -3091,6 +3091,17 @@
 	<message key="varia">Varia</message>
 	<message key="other">Sonstige Publikationen</message>
 
+
+	<message key="xmlui.ArtifactBrowser.Navigation.browse_series">Reihe</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.title.metadata.series">Blättern {0} nach Reihe {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.trail.metadata.series">Blättern {0}  nach Reihe {1}</message>
+	<message key="xmlui.ArtifactBrowser.ConfigurableBrowse.series.column_heading"></message>
+
+        <message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_communities"></message>
+        <message key="xmlui.ArtifactBrowser.CommunityViewer.head_sub_collections"></message>
+        <message key="xmlui.ArtifactBrowser.Navigation.home.collection">Fachgebiete</message>
+        <message key="xmlui.ArtifactBrowser.Navigation.special.collection">Publikationen außerhalb der Verlagsprogramms</message>
+
 	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Sprache</message>
 	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publikationstyp</message>
 	<message key="xmlui.Discovery.AdvancedSearch.type_type">Publikationstyp</message>

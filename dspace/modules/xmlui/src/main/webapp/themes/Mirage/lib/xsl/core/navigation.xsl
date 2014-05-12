@@ -114,8 +114,10 @@
                             </fieldset>
                         </form>
                         <!--Only add if the advanced search url is different from the simple search-->
+
+			<!-- Do not show "Advance search" link -->
+			<!--
                         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='advancedURL'] != /dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='search'][@qualifier='simpleURL']">
-                            <!-- The "Advanced search" link, to be perched underneath the search box -->
                             <a>
                                 <xsl:attribute name="href">
                                     <xsl:value-of
@@ -124,14 +126,57 @@
                                 <i18n:text>xmlui.dri2xhtml.structural.search-advanced</i18n:text>
                             </a>
                         </xsl:if>
+			-->
                     </div>
 
                 </xsl:if>
                 <!-- Once the search box is built, the other parts of the options are added -->
 		<!-- Show Browse navi first, then static info navi, then the other options -->
-		<xsl:apply-templates select="dri:list[@n='browse']"/>
 
-		                <h1 class="ds-option-set-head"><i18n:text>xmlui.static.navigation.informations</i18n:text></h1>
+		<!-- modify browsing navi on the homepage: 
+			show collection with regular program instead of communities & collections; 
+			append link to special collection with nonregular publications -->
+
+		 <xsl:choose>
+                        <xsl:when test="string-length(//dri:pageMeta/dri:metadata[@element='request'][@qualifier='URI']) = 0">
+                                <h1 class="ds-option-set-head"><i18n:text>xmlui.ArtifactBrowser.CommunityViewer.head_browse</i18n:text></h1>
+                                <div class="ds-option-set" id="aspect_viewArtifacts_Navigation_list_browse">
+                                        <ul class="ds-options-list">
+                                                <li>
+                                                        <ul class="ds-simple-list sublist">
+                                                                <li>
+                                                                        <a href="{$context-path}/{$home-collection}"><i18n:text>xmlui.ArtifactBrowser.Navigation.home.collection</i18n:text></a>
+                                                                </li>
+                                                                <li>
+                                                                        <a href="{$context-path}/{$home-collection}/browse?type=dateissued"><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_dateissued</i18n:text></a>
+                                                                </li>
+                                                                <li>
+                                                                        <a href="{$context-path}/{$home-collection}/browse?type=author"><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_author</i18n:text></a>
+                                                                </li>
+                                                                <li>
+                                                                        <a href="{$context-path}/{$home-collection}/browse?type=title"><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_title</i18n:text></a>
+                                                                </li>
+                                                                <li>
+                                                                        <a href="{$context-path}/{$home-collection}/browse?type=series"><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_series</i18n:text></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+                                                <li>
+                                                        <ul class="ds-simple-list sublist">
+                                                                <li class="ds-simple-list-item">
+                                                                        <a href="{$context-path}/{$special-collection}"><i18n:text>xmlui.ArtifactBrowser.Navigation.special.collection</i18n:text></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+					</ul>
+                                </div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                            <xsl:apply-templates select="dri:list[@n='browse']"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+		
+		<h1 class="ds-option-set-head"><i18n:text>xmlui.static.navigation.informations</i18n:text></h1>
                 <div class="ds-option-set" id="infonav">
                         <ul class="ds-option-list">
                                 <li>
@@ -161,8 +206,12 @@
                 <xsl:apply-templates select="dri:list[@n='discovery']"/>
                 <xsl:apply-templates select="dri:list[@n='administrative']"/>
                 <xsl:apply-templates select="dri:list[@n='statistics']"/>
+
+	
                 <!-- DS-984 Add RSS Links to Options Box -->
-                <xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
+		<!-- Do not show RSS Links -->
+                <!-- 
+		<xsl:if test="count(/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='feed']) != 0">
                     <h1 id="ds-feed-option-head" class="ds-option-set-head">
                         <i18n:text>xmlui.feed.header</i18n:text>
                     </h1>
@@ -170,8 +219,8 @@
                         <ul>
                             <xsl:call-template name="addRSSLinks"/>
                         </ul>
-                    </div>
-                </xsl:if>
+                    </div> 
+                </xsl:if> -->
 
 
             </div>
