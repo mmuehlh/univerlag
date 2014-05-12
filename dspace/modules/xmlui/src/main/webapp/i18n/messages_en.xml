@@ -2569,5 +2569,32 @@
 	<message key="xmlui.static.policy">
 	</message>	
 	<message key="xmlui.static.impressum.head">Impressum</message>
-  
+
+
+	<!-- search facet values -->
+
+	<message key="de">german</message>
+	<message key="en">english</message>
+	<message key="ger">german</message>
+	<message key="eng">english</message>
+	<message key="ara">arabic</message>
+	<message key="per">persian</message>
+
+	<message key="peerReviewed">University Press</message>
+	<message key="surveyed">University Prints</message>
+	<message key="varia">Varia</message>
+	<message key="other">Other Publications</message>
+	<message key="xmlui.dri2xhtml.METS-1.0.item-language">Language</message>
+
+	<message key="monograph">Book</message>
+	<message key="anthology">Anthology</message>
+	<message key="conference">Conference proceedings</message>
+	<message key="catalog">Catalog</message>
+	<message key="bibliography">Bibliography</message>
+	<message key="thesis">University paper</message>  
+
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Language</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publication type</message>
+	<message key="xmlui.Discovery.AdvancedSearch.type_type">Publication type</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.division">Division</message>
 </catalogue>

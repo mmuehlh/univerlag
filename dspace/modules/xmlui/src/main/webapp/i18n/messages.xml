@@ -3071,4 +3071,29 @@
 		</div>
 	</message>
 
+	<!-- search facet values -->
+	<message key="de">deutsch</message>
+	<message key="ger">deutsch</message>
+	<message key="en">englisch</message>
+	<message key="eng">englisch</message>
+	<message key="ara">arabisch</message>
+	<message key="per">persisch</message>
+
+	<message key="monograph">Buch</message>
+	<message key="anthology">Aufsatzsammlung</message>
+	<message key="conference">Konferenzband</message>
+	<message key="catalog">Katalog</message>
+	<message key="bibliography">Bibliografie</message>
+	<message key="thesis">Hochschulschrift</message>
+
+	<message key="peerReviewed">Universitätsverlag</message>
+	<message key="surveyed">Universitätsdrucke</message>
+	<message key="varia">Varia</message>
+	<message key="other">Sonstige Publikationen</message>
+
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.language">Sprache</message>
+	<message key="xmlui.ArtifactBrowser.AdvancedSearch.type_type">Publikationstyp</message>
+	<message key="xmlui.Discovery.AdvancedSearch.type_type">Publikationstyp</message>
+	<message key="xmlui.ArtifactBrowser.SimpleSearch.filter.division">Sparte</message>
+
 </catalogue>

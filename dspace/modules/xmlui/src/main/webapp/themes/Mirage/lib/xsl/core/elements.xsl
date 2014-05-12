@@ -92,4 +92,32 @@
         </xsl:call-template>
     </xsl:template>
 
+    <!-- OVERWRITES -->
+    
+    <!-- Translate langugage iso code and division in search facet bar -->
+    <xsl:template match="dri:xref">
+        <a>
+            <xsl:if test="@target">
+                <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
+            </xsl:if>
+
+            <xsl:if test="@rend">
+                <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
+            </xsl:if>
+
+            <xsl:if test="@n">
+                <xsl:attribute name="name"><xsl:value-of select="@n"/></xsl:attribute>
+            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="contains(@target, 'filtertype=language') or contains(@target, 'filtertype=division') or contains(@target, 'filtertype=type')">
+                        <i18n:text><xsl:value-of select="substring-before(.,' ')" /></i18n:text><xsl:value-of select="concat(' ', substring-after(., ' ')) "/> 
+                </xsl:when>
+                <xsl:otherwise>
+                        <xsl:apply-templates />
+                </xsl:otherwise>
+           </xsl:choose>
+        </a>
+    </xsl:template> 
+
+
 </xsl:stylesheet>
